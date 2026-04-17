@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You ❤️</title>
+
+<style>
+body {
+  background: pink;
+  text-align: center;
+  font-family: Arial;
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#yes {
+  background-color: green;
+  color: white;
+  position: absolute;
+}
+
+#no {
+  background-color: red;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<h1>NEEKU KONCHAM PICHA? 😜</h1>
+
+<button id="yes" onmouseover="moveYes()">YES 😂</button>
+<button id="no" onclick="noClicked()">NO 😎</button>
+
+<script>
+function noClicked() {
+  document.body.innerHTML = "<h1>Haha! I knew it 😆❤️</h1>";
+}
+
+function moveYes() {
+  let x = Math.random() * (window.innerWidth - 100);
+  let y = Math.random() * (window.innerHeight - 50);
+
+  document.getElementById("yes").style.left = x + "px";
+  document.getElementById("yes").style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
